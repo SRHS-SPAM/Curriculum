@@ -2,7 +2,11 @@
 
 > 서울로봇고등학교 전공동아리 스팸에서 진행하는 커리큘럼 프로젝트 입니다.
 
-![Next version][Next] 버전을 기재해 주세요
+![Next version][Next] 14.0.3
+
+![Tailwind version][Tailwindcss] 3.3.0
+
+![react version][react] 18
 
 <!-- [자세한 프로젝트 설명은 이곳에서 확인해주세요.][project] -->
 
@@ -46,5 +50,7 @@ npm run dev
 <!-- Markdown link & img dfn's -->
 
 [Next]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+[Tailwindcss]: https://img.shields.io/badge/Tailwindcss-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white
+[react]: https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white
 
 <!-- [project]: https://docs.google.com/document/d/124b_FfRsnkxLhxpsaAVXoOExlDOkc-XrUzHlvItwlno/edit?usp=drive_link -->

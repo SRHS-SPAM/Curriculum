@@ -1,14 +1,15 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <header>
         <div className="top">
-          <a>문제</a>
-          <a>내 순위</a>
-          <a>대쉬보드</a>
-          <a>로그인</a>
+          <Link href={"/"}>문제</Link>
+          <Link href={"/"}>내 순위</Link>
+          <Link href={"/"}>대쉬보드</Link>
+          <Link href={"/"}>로그인</Link>
         </div>
       </header>
       <main>
@@ -54,6 +55,6 @@ export default function Home() {
           </div>
         </article>
       </main>
-    </div>
+    </>
   );
 }
