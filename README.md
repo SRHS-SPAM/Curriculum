@@ -10,49 +10,41 @@
 
 개발 환경 설정법을 기재해 주세요
 
-```bash
-npm install -g yarn
+```zsh
+npm i
 
-yarn set version stable
-
-yarn
-
-yarn install
-
-
-
+npm run dev
 ```
 
 ## 업데이트 내역
 
-<!-- * 0.2.1
-    * 수정: 문서 업데이트 (모듈 코드 동일)
-* 0.2.0
-    * 수정: `setDefaultXYZ()` 메서드 제거
-    * 추가: `init()` 메서드 추가
-* 0.1.1
-    * 버그 수정: `baz()` 메서드 호출 시 부팅되지 않는 현상 (@컨트리뷰터 감사합니다!)
-* 0.1.0
-    * 첫 출시
-    * 수정: `foo()` 메서드 네이밍을 `bar()`로 수정 -->
-
+<!--
+* 0.0.1
+    * init -->
+<!--
 - 0.0.1
-  - 초기 프로젝트 진행
+  - 초기 프로젝트 진행 -->
 
 ## 컨프리뷰터
 
-[정삼복][3boku] - PM, flutter ios, Backend Development
+[국재윤](https://github.com/igiza1213) - General, Main Next.js, Frontend Development
 <br>
-[김민재][mjro] - Design, Android Development
+[정윤환](https://github.com/Torychu) - Web, Main HTML JSX, Frontend Development
 <br>
-[김선우][suro] - Web, Main flutter Development
+[김도원](https://github.com/dnjeh) - Web, Sub Next.js Development
+<br>
+[지민철](https://github.com/asdf1596) - Web, Sub Next.js Development
+<br>
+[강내빈](https://github.com/nebin1118) - Web, Sub HTML, Frontend Development
+<br>
+[김도은](https://github.com/miren-doeun) - Web, Main Backend Development
+<br>
+[전재민](https://github.com/jmin0714) - Design, Main UI/UX Designer
+<br>
+[김마유](https://github.com/mayukim) - Design, Sub UI/UX Designer
 
 <!-- Markdown link & img dfn's -->
 
 [Next]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 
 <!-- [project]: https://docs.google.com/document/d/124b_FfRsnkxLhxpsaAVXoOExlDOkc-XrUzHlvItwlno/edit?usp=drive_link -->
-
-[3boku]: https://github.com/3boku
-[mjro]: https://github.com/Minjaero
-[suro]: https://github.com/SUNWOOKR
