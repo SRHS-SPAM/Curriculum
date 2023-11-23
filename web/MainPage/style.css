@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 99vw;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.top {
+  width: 40vw;
+  height: 9vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+nav{
+  height: 40vh;
+  width: 80vw;
+  background-color: #435585;
+  position: relative; top: -10%;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 12.2px;
+}
+
+.left,.right{
+  height: 40vh;
+  width: 35vw;
+}
+.right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.photo{
+  position: relative; left: -38px;
+  width: 35vw;
+}
+
+.number{
+  width: 7vw;
+  height: 36px;
+  border-radius: 100px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  background-color: black;
+  opacity: 0.5;
+  
+  position: relative; top: 132px; left: -10px;
+  
+  color: white;
+  font-size: 30px;
+}
+
+main{
+  width: 80vw;
+  height: 150vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+article{
+  width: 80vw;
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bottom1{
+  width: 80vw;
+  height: 38vh;
+  display: flex;
+  align-items: center;
+}
+
+.box1-1,.box1-2
+,.box1-3,.box1-4{
+  width: 20vw;
+  height: 34vh;
+  background-color: aqua;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  align-items: end;
+}
+
+.bar1-1,.bar1-2
+,.bar1-3,.bar1-4{
+  width: 20vw;
+  height: 10vh;
+  background-color: lightgray;
+  border-radius: 0px 0px 20px 20px/ 0px 0px 20px 20px;
+}
