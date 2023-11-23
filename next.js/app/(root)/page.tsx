@@ -1,15 +1,16 @@
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <>
-      <header>
+      <header className="fixed z-[1] w-full bg-[white] h-24">
         <div className="top">
-          <Link href={"/"}>문제</Link>
-          <Link href={"/"}>내 순위</Link>
-          <Link href={"/"}>대쉬보드</Link>
-          <Link href={"/"}>로그인</Link>
+          <Button variant={"ghost"}>문제</Button>
+          <Button variant={"ghost"}>내 순위</Button>
+          <Button variant={"ghost"}>대쉬보드</Button>
+          <Button variant={"ghost"}>로그인</Button>
         </div>
       </header>
       <main>
