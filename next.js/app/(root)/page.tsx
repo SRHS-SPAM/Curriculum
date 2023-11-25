@@ -10,7 +10,7 @@ export default function Home() {
           <Button variant={"ghost"} className="text-[130%]">
             문제
           </Button>
-          <Button variant={"ghost"} className="text-[130%]">
+          <Button variant="ghost" className="text-[130%]">
             내 순위
           </Button>
           <Button variant={"ghost"} className="text-[130%]">
