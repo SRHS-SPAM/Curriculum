@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -9,63 +9,63 @@
 
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
- 
+
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
- 
+
     --primary: 0 0% 9%;
     --primary-foreground: 0 0% 98%;
- 
+
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 9%;
- 
+
     --muted: 0 0% 96.1%;
     --muted-foreground: 0 0% 45.1%;
- 
+
     --accent: 0 0% 96.1%;
     --accent-foreground: 0 0% 9%;
- 
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 0 0% 89.8%;
     --input: 0 0% 89.8%;
     --ring: 0 0% 3.9%;
- 
+
     --radius: 0.5rem;
   }
- 
+
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
- 
+
     --card: 0 0% 3.9%;
     --card-foreground: 0 0% 98%;
- 
+
     --popover: 0 0% 3.9%;
     --popover-foreground: 0 0% 98%;
- 
+
     --primary: 0 0% 98%;
     --primary-foreground: 0 0% 9%;
- 
+
     --secondary: 0 0% 14.9%;
     --secondary-foreground: 0 0% 98%;
- 
+
     --muted: 0 0% 14.9%;
     --muted-foreground: 0 0% 63.9%;
- 
+
     --accent: 0 0% 14.9%;
     --accent-foreground: 0 0% 98%;
- 
+
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
- 
+
     --border: 0 0% 14.9%;
     --input: 0 0% 14.9%;
     --ring: 0 0% 83.1%;
   }
 }
- 
+
 @layer base {
   * {
     @apply border-border;
@@ -73,4 +73,44 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.Video_box {
+  @apply w-[20vw] h-[34vh] bg-[rgba(0,255,255,1)] relative flex items-end rounded-[20px];
+}
+.Video_info {
+  @apply w-[20vw] h-[13vh] bg-[#f2f2f2] flex flex-col gap-[1.2rem] font-[bold] transition duration-500 ease-in-out p-4 rounded-[0px_0px_20px_20px/_0px_0px_20px_20px];
+}
+
+.bottom1 {
+  width: 80vw;
+  height: 38vh;
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  gap: 3rem;
+}
+
+.bottom1::-webkit-scrollbar {
+  height: 1.3rem;
+}
+
+.bottom1::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #ade8f4, #caf0f8);
+  border-radius: 25px;
+}
+
+.bottom1::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.Video_detail_info {
+  @apply hidden opacity-0 transition-[opacity] duration-500 ease-in-out;
+}
+
+.Video_box:hover .Video_detail_info {
+  display: inline;
+  opacity: 1;
+  animation: opacity 0.5s ease;
 }
