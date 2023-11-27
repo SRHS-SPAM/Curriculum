@@ -126,7 +126,7 @@ article {
   border-radius: 20px;
   position: relative;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
 }
 
 .bar1-1,
