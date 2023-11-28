@@ -75,13 +75,6 @@
   }
 }
 
-.Video_box {
-  @apply w-[20vw] h-[34vh] bg-[rgba(0,255,255,1)] relative flex items-end rounded-[20px];
-}
-.Video_info {
-  @apply w-[20vw] h-[13vh] bg-[#f2f2f2] flex flex-col gap-[1.2rem] font-[bold] transition duration-500 ease-in-out p-4 rounded-[0px_0px_20px_20px/_0px_0px_20px_20px];
-}
-
 .bottom1 {
   width: 80vw;
   height: 38vh;
@@ -97,20 +90,10 @@
 }
 
 .bottom1::-webkit-scrollbar-thumb {
-  background: linear-gradient(to right, #ade8f4, #caf0f8);
+  background: linear-gradient(to right, #adb5bd, #dee2e6);
   border-radius: 25px;
 }
 
 .bottom1::-webkit-scrollbar-track {
   background-color: rgba(0, 0, 0, 0);
-}
-
-.Video_detail_info {
-  @apply hidden opacity-0 transition-[opacity] duration-500 ease-in-out;
-}
-
-.Video_box:hover .Video_detail_info {
-  display: inline;
-  opacity: 1;
-  animation: opacity 0.5s ease;
 }
