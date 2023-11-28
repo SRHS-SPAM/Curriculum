@@ -179,15 +179,6 @@ article a {
   transition: 0.9s ease 0.1s;
 }
 
-@keyframes opacity-reverse {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
 .Video_title {
   font-size: 1.2rem;
 }
