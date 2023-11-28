@@ -92,7 +92,7 @@ export default function Home() {
   ];
   return (
     <div className="flex flex-col items-center gap-[30px] m-0 pb-40">
-      <header className="fixed z-[1] w-full bg-[white] h-24">
+      <header className="fixed z-[1] w-full bg-[white] h-24 lg:h-[4.5rem]">
         <div className="w-full h-full flex justify-center items-center gap-12 border-b-[rgba(0,0,0,0.4)] border-b border-solid">
           <Button variant={"ghost"} className="text-[140%] font-[700]">
             문제
@@ -121,7 +121,7 @@ export default function Home() {
                 하나부터 열까지 배우는 쉬운 과정!
               </strong>
             </div>
-            <div className="bg-[rgba(0,0,0,0.5)] w-3/12 flex justify-around items-center text-center gap-2 text-[white] font-[bold] text-[2rem] p-[0.3rem] rounded-[2rem]">
+            <div className="bg-[rgba(0,0,0,0.5)] w-3/12 flex justify-around items-center text-center gap-2 text-[white] font-[bold] text-[1.5rem] p-[0.3rem] rounded-[2rem] ">
               <ChevronLeft size={32} />
               <div className="banner_page_count">1 / 4</div>
               <ChevronRight size={32} />
