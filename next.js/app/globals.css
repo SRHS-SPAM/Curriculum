@@ -83,6 +83,7 @@
   overflow-x: scroll;
   overflow-y: hidden;
   gap: 3rem;
+  font-family: NanumSquare;
 }
 
 .bottom1::-webkit-scrollbar {

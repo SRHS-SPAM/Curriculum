@@ -154,11 +154,11 @@ export default function Home() {
                   <div className="w-[20vw] h-[13vh] bg-[#f2f2f2] flex flex-col gap-[1.2rem] font-[bold] transition-[height] duration-500 ease-in-out p-4 rounded-[0px_0px_20px_20px/_0px_0px_20px_20px] group-hover:h-[26vh]">
                     <div className="text-[1.2rem]">{lecture.title}</div>
                     <div className="Video_subtitle">{lecture.description}</div>
-                    <div className="hidden opacity-0  duration-500 direction-alternate ease-in-out group-hover:inline group-hover:opacity-100 transition-[opacity] group-hover:animate-opacity">
+                    <div className="h-full gap-3 flex flex-col opacity-0 transition-[opacity] duration-500 ease-in-out group-hover:transition-[opacity] group-hover:opacity-100 group-hover:duration-1000 group-hover:delay-100">
                       {/* detail info*/}
-                      <p>{lecture.fild}</p>
-                      <p>수강 시간: {lecture.period}시간</p>
-                      <p>만든이: {lecture.writer}</p>
+                      <div>{lecture.fild}</div>
+                      <div>수강 시간: {lecture.period}시간</div>
+                      <div>만든이: {lecture.writer}</div>
                     </div>
                   </div>
                 </div>
