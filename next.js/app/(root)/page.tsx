@@ -175,27 +175,31 @@ export default function Home() {
             className="w-[80vw] h-[45vh] flex flex-col justify-between"
             key={i}
           >
-            <div className="text-5xl ml-4">
+            <div className='text-[2rem] ml-4 before:content-[""] before:absolute before:top-0 before:bottom-0 before:w-4 before:from-inherit before:left-0 before:to-white before:z-[3] after:content-[""] after:absolute after:top-0 after:bottom-0 after:w-4 after:from-inherit after:to-white after:z-0 after:right-0 after:scale-x-[-1]'>
               <strong>{mapFild.fild} 강의</strong>
             </div>
-            <div className="bottom1">
-              {mapFild.lecture.map((lecture: lectureType, j: number) => (
-                <div
-                  key={j}
-                  className="w-[20vw] h-[34vh] font-extrabold bg-[#ced4da] relative flex items-end rounded-[20px] group"
-                >
-                  <div className="w-[20vw] h-[13vh] bg-[#f2f2f2] flex flex-col gap-[1.2rem] font-[bold] transition-[height] duration-500 ease-in-out p-4 rounded-[0px_0px_20px_20px/_0px_0px_20px_20px] group-hover:h-[26vh]">
-                    <div className="text-[1.2rem]">{lecture.title}</div>
-                    <div className="Video_subtitle">{lecture.description}</div>
-                    <div className="h-full gap-3 flex flex-col opacity-0 transition-[opacity] duration-500 ease-in-out group-hover:transition-[opacity] group-hover:opacity-100 group-hover:duration-1000 group-hover:delay-100">
-                      {/* detail info*/}
-                      <div>{lecture.fild}</div>
-                      <div>수강 시간: {lecture.period}시간</div>
-                      <div>만든이: {lecture.writer}</div>
+            <div className="relative z-[2]">
+              <div className="bottom1">
+                {mapFild.lecture.map((lecture: lectureType, j: number) => (
+                  <div
+                    key={j}
+                    className="w-[20vw] h-[34vh] font-extrabold bg-[#ced4da] relative flex items-end rounded-[20px] group"
+                  >
+                    <div className="w-[20vw] h-[13vh] bg-[#f2f2f2] flex flex-col gap-[1.2rem] font-[bold] transition-[height] duration-500 ease-in-out p-4 rounded-[0px_0px_20px_20px/_0px_0px_20px_20px] group-hover:h-[26vh]">
+                      <div className="text-[1.2rem]">{lecture.title}</div>
+                      <div className="Video_subtitle">
+                        {lecture.description}
+                      </div>
+                      <div className="h-full gap-3 flex flex-col opacity-0 transition-[opacity] duration-500 ease-in-out group-hover:transition-[opacity] group-hover:opacity-100 group-hover:duration-1000 group-hover:delay-100">
+                        {/* detail info*/}
+                        <div>{lecture.fild}</div>
+                        <div>수강 시간: {lecture.period}시간</div>
+                        <div>만든이: {lecture.writer}</div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </article>
         ))}
