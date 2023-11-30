@@ -69,21 +69,6 @@ body {
   width: 35vw;
 }
 
-.banner_page {
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 25%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-  gap: 0.5rem;
-  border-radius: 2rem;
-  padding: 0.3rem;
-  color: white;
-  font-weight: bold;
-  font-size: 2rem;
-}
-
 .banner_maintxt {
   font-size: 2.2em;
   color: white;
@@ -112,7 +97,7 @@ article {
 }
 
 article a {
-  font-size: 3rem;
+  font-size: 2rem;
   margin-left: 1rem;
 }
 
@@ -124,10 +109,38 @@ article a {
   overflow-x: scroll;
   overflow-y: hidden;
   gap: 3rem;
+  padding: 0 1rem;
+  z-index: 1;
+}
+
+.scroll_container {
+  position: relative;
+  z-index: 2;
+}
+
+.scroll_container::before,
+.scroll_container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1rem; /* 흐림 효과 넓이 */
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+  z-index: 3;
+}
+
+.scroll_container::before {
+  left: 0;
+}
+
+.scroll_container::after {
+  z-index: 0;
+  right: 0;
+  transform: scaleX(-1); /* 좌우 반전 추가 */
 }
 
 .bottom1::-webkit-scrollbar {
-  height: 1.3rem;
+  height: 1rem;
 }
 
 .bottom1::-webkit-scrollbar-thumb {
@@ -141,12 +154,13 @@ article a {
 
 .Video_box {
   width: 50vw;
-  height: 34vh;
+  height: 32vh;
   background-color: rgba(0, 255, 255, 1);
   border-radius: 20px;
   position: relative;
   display: flex;
   align-items: flex-end;
+  z-index: 0;
 }
 
 .Video_info {
@@ -157,7 +171,7 @@ article a {
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  gap: 1.2rem;
+  gap: 1rem;
   font-weight: bold;
   transition: height 0.5s ease;
 }
@@ -166,10 +180,11 @@ article a {
   display: none;
   opacity: 0;
   transition: opacity 5s ease;
+  font-size: 0.7rem;
 }
 
 .Video_box:hover .Video_info {
-  height: 26vh;
+  height: 80%;
 }
 
 .Video_box:hover .Video_box {
@@ -192,5 +207,9 @@ article a {
 }
 
 .Video_title {
-  font-size: 1.2rem;
+  font-size: 1rem;
+}
+
+.Video_subtiitle {
+  font-size: 0.8rem;
 }
