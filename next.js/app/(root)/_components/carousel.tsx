@@ -36,11 +36,11 @@ export default function Carousel(props: PropType) {
 
   return (
     <>
-      <div className="w-full h-[45vh] relative rounded-md ">
+      <div className="w-[80vw] relative rounded-md ">
         <div className="overflow-hidden relative rounded-md" ref={emblaRef}>
-          <div className="flex flex-col flex-wrap h-[45vh] flex-none">
+          <div className="flex flex-col flex-wrap h-[40vh] flex-none">
             {slides.map((slide, index) => (
-              <div className="w-full h-[45vh] relative mx-1" key={index}>
+              <div className="w-full h-[40vh] relative mx-1" key={index}>
                 {slide}
               </div>
             ))}

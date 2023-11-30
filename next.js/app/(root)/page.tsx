@@ -119,10 +119,7 @@ export default function Home() {
           }}
           slides={[
             <>
-              <div
-                key={0}
-                className="h-[40vh] w-[80vw] bg-[#435585] relative flex justify-around rounded-[12.2px]"
-              >
+              <div className="h-[40vh] w-[80vw] bg-[#435585] relative flex justify-around rounded-[12.2px]">
                 <div className="h-[40vh] w-[35vw] flex flex-col justify-around">
                   <div className="banner_txt_container">
                     <p>
@@ -133,11 +130,6 @@ export default function Home() {
                     <strong className="text-2xl text-[white]">
                       하나부터 열까지 배우는 쉬운 과정!
                     </strong>
-                  </div>
-                  <div className="bg-[rgba(0,0,0,0.5)] w-3/12 flex justify-around items-center text-center gap-2 text-[white] font-[bold] text-[1.5rem] p-[0.3rem] rounded-[2rem] ">
-                    <ChevronLeft size={32} />
-                    <div className="banner_page_count">1 / 4</div>
-                    <ChevronRight size={32} />
                   </div>
                 </div>
                 <div className="h-[40vh] w-[35vw] flex justify-center items-center">
@@ -151,7 +143,31 @@ export default function Home() {
                 </div>
               </div>
             </>,
-            <div key={1}>ㅇㅇ</div>,
+            <>
+              <div className="h-[40vh] w-[80vw] bg-[#435585] relative flex justify-around rounded-[12.2px]">
+                <div className="h-[40vh] w-[35vw] flex flex-col justify-around">
+                  <div className="banner_txt_container">
+                    <p>
+                      <strong className="text-[2.2em] text-[white]">
+                        2024년 스팸 프론트 커리큘럼
+                      </strong>
+                    </p>
+                    <strong className="text-2xl text-[white]">
+                      하나부터 열까지 배우는 쉬운 과정!
+                    </strong>
+                  </div>
+                </div>
+                <div className="h-[40vh] w-[35vw] flex justify-center items-center">
+                  <Image
+                    className="relative w-[35vw]"
+                    src="/images/배너1.png"
+                    alt="배너1"
+                    width={756}
+                    height={419}
+                  />
+                </div>
+              </div>
+            </>,
           ]}
         />
         {mapList.map((mapFild: mapType, i: number) => (
