@@ -17,92 +17,81 @@ interface mapType {
   lecture: lectureType[];
 }
 
+const mapList: mapType[] = [
+  {
+    fild: "프론트엔드",
+    lecture: [
+      {
+        title: "누구나 할 수 있다! 프론트 기초 강의 배우기!",
+        description: "처음부터 배우는 프론트강의!",
+        fild: "프론트엔드/코딩",
+        period: "100",
+        writer: "국재윤",
+      },
+      {
+        title: "누구나 할 수 있다! 백엔드 기초 강의 배우기!",
+        description: "처음부터 배우는 백엔드 강의!",
+        fild: "백엔드/코딩",
+        period: "100",
+        writer: "정현서",
+      },
+      {
+        title: "누구나 할 수 있다! 프론트 기초 강의 배우기!",
+        description: "처음부터 배우는 프론트강의!",
+        fild: "프론트엔드/코딩",
+        period: "100",
+        writer: "정윤환",
+      },
+      {
+        title: "누구나 할 수 있다! 프론트 기초 강의 배우기!",
+        description: "처음부터 배우는 프론트강의!",
+        fild: "프론트엔드/코딩",
+        period: "100",
+        writer: "정윤환",
+      },
+      {
+        title: "누구나 할 수 있다! 프론트 기초 강의 배우기!",
+        description: "처음부터 배우는 프론트강의!",
+        fild: "프론트엔드/코딩",
+        period: "100",
+        writer: "정윤환",
+      },
+    ],
+  },
+  {
+    fild: "백엔드",
+    lecture: [
+      {
+        title: "누구나 할 수 있다! 백엔드 기초 강의 배우기!",
+        description: "처음부터 배우는 백엔드 강의!",
+        fild: "백엔드/코딩",
+        period: "100",
+        writer: "정윤환",
+      },
+      {
+        title: "누구나 할 수 있다! 백엔드 기초 강의 배우기!",
+        description: "처음부터 배우는 백엔드 강의!",
+        fild: "백엔드/코딩",
+        period: "100",
+        writer: "정현서",
+      },
+    ],
+  },
+  {
+    fild: "디자인",
+    lecture: [
+      {
+        title: "누구나 할 수 있다! 디자인 기초 강의 배우기!",
+        description: "처음부터 배우는 디자인 강의!",
+        fild: "프론트엔드/코딩",
+        period: "100",
+        writer: "전재민",
+      },
+    ],
+  },
+];
+
 export default function Home() {
-  const mapList: mapType[] = [
-    {
-      fild: "프론트엔드",
-      lecture: [
-        {
-          title: "누구나 할 수 있다! 프론트 기초 강의 배우기!",
-          description: "처음부터 배우는 프론트강의!",
-          fild: "프론트엔드/코딩",
-          period: "100",
-          writer: "국재윤",
-        },
-        {
-          title: "누구나 할 수 있다! 백엔드 기초 강의 배우기!",
-          description: "처음부터 배우는 백엔드 강의!",
-          fild: "백엔드/코딩",
-          period: "100",
-          writer: "정현서",
-        },
-        {
-          title: "누구나 할 수 있다! 프론트 기초 강의 배우기!",
-          description: "처음부터 배우는 프론트강의!",
-          fild: "프론트엔드/코딩",
-          period: "100",
-          writer: "정윤환",
-        },
-        {
-          title: "누구나 할 수 있다! 프론트 기초 강의 배우기!",
-          description: "처음부터 배우는 프론트강의!",
-          fild: "프론트엔드/코딩",
-          period: "100",
-          writer: "정윤환",
-        },
-        {
-          title: "누구나 할 수 있다! 프론트 기초 강의 배우기!",
-          description: "처음부터 배우는 프론트강의!",
-          fild: "프론트엔드/코딩",
-          period: "100",
-          writer: "정윤환",
-        },
-      ],
-    },
-    {
-      fild: "백엔드",
-      lecture: [
-        {
-          title: "누구나 할 수 있다! 백엔드 기초 강의 배우기!",
-          description: "처음부터 배우는 백엔드 강의!",
-          fild: "백엔드/코딩",
-          period: "100",
-          writer: "정윤환",
-        },
-        {
-          title: "누구나 할 수 있다! 백엔드 기초 강의 배우기!",
-          description: "처음부터 배우는 백엔드 강의!",
-          fild: "백엔드/코딩",
-          period: "100",
-          writer: "정현서",
-        },
-      ],
-    },
-    {
-      fild: "디자인",
-      lecture: [
-        {
-          title: "누구나 할 수 있다! 디자인 기초 강의 배우기!",
-          description: "처음부터 배우는 디자인 강의!",
-          fild: "프론트엔드/코딩",
-          period: "100",
-          writer: "전재민",
-        },
-      ],
-    },
-    {
-      fild: "알고리즘",
-      lecture: [
-        {
-          title: "누구나 할 수 있다! 산업용로봇 기초 강의 배우기!",
-          description: "처음부터 배우는 파이썬 강의!",
-          fild: "알고리즘/코딩",
-          period: "100",
-          writer: "지민철",
-        },
-      ],
-    },
-  ];
   return (
     <div className="flex flex-col items-center gap-[30px] m-0 pb-40">
       <header className="fixed z-[1] w-full bg-[white] h-24 lg:h-[4.5rem]">
@@ -131,12 +120,12 @@ export default function Home() {
           }}
           slides={[
             <>
-              <div className="h-[40vh] w-[80vw] bg-[#435585] relative flex justify-around rounded-[12.2px]">
+              <div className="h-[40vh] w-[80vw] bg-[#5C469C] relative flex justify-around rounded-[12.2px]">
                 <div className="h-[40vh] w-[35vw] flex flex-col justify-around">
                   <div className="banner_txt_container">
                     <p>
                       <strong className="text-[2.2em] text-[white]">
-                        2024년 스팸 프론트 커리큘럼
+                        2024년 스팸 커리큘럼
                       </strong>
                     </p>
                     <strong className="text-2xl text-[white]">
@@ -156,7 +145,7 @@ export default function Home() {
               </div>
             </>,
             <>
-              <div className="h-[40vh] w-[80vw] bg-[#435585] relative flex justify-around rounded-[12.2px]">
+              <div className="h-[40vh] w-[80vw] bg-[#86B6F6] relative flex justify-around rounded-[12.2px]">
                 <div className="h-[40vh] w-[35vw] flex flex-col justify-around">
                   <div className="banner_txt_container">
                     <p>
@@ -165,7 +154,57 @@ export default function Home() {
                       </strong>
                     </p>
                     <strong className="text-2xl text-[white]">
-                      하나부터 열까지 배우는 쉬운 과정!
+                      프론트 엔드 개발자의 한 걸음!
+                    </strong>
+                  </div>
+                </div>
+                <div className="h-[40vh] w-[35vw] flex justify-center items-center">
+                  <Image
+                    className="relative w-[35vw]"
+                    src="/images/배너1.png"
+                    alt="배너1"
+                    width={756}
+                    height={419}
+                  />
+                </div>
+              </div>
+            </>,
+            <>
+              <div className="h-[40vh] w-[80vw] bg-[#1D267D] relative flex justify-around rounded-[12.2px]">
+                <div className="h-[40vh] w-[35vw] flex flex-col justify-around">
+                  <div className="banner_txt_container">
+                    <p>
+                      <strong className="text-[2.2em] text-[white]">
+                        2024년 스팸 백엔드 커리큘럼
+                      </strong>
+                    </p>
+                    <strong className="text-2xl text-[white]">
+                      백엔드 고수가 되는 과정!
+                    </strong>
+                  </div>
+                </div>
+                <div className="h-[40vh] w-[35vw] flex justify-center items-center">
+                  <Image
+                    className="relative w-[35vw]"
+                    src="/images/배너1.png"
+                    alt="배너1"
+                    width={756}
+                    height={419}
+                  />
+                </div>
+              </div>
+            </>,
+            <>
+              <div className="h-[40vh] w-[80vw] bg-[#A674D8] relative flex justify-around rounded-[12.2px]">
+                <div className="h-[40vh] w-[35vw] flex flex-col justify-around">
+                  <div className="banner_txt_container">
+                    <p>
+                      <strong className="text-[2.2em] text-[white]">
+                        2024년 스팸 디자인 커리큘럼
+                      </strong>
+                    </p>
+                    <strong className="text-2xl text-[white]">
+                      세계 최고의 디자이너가 되어라
                     </strong>
                   </div>
                 </div>
@@ -190,6 +229,7 @@ export default function Home() {
             <div className="text-[2rem] ml-4">
               <strong>{mapFild.fild} 강의</strong>
             </div>
+
             <div className='relative z-[2] before:content-[""] before:absolute before:top-0 before:bottom-0 before:w-4 before:bg-gradient-to-l before:from-[rgba(255,255,255,0)] before:left-0 before:to-white before:z-[3] after:bg-gradient-to-l after:content-[""] after:absolute after:top-0 after:bottom-0 after:w-4 after:from-[rgba(255,255,255,0)] after:to-white after:z-0 after:right-0 after:scale-x-[-1]'>
               <div className="bottom1">
                 {mapFild.lecture.map((lecture: lectureType, j: number) => (
@@ -206,6 +246,7 @@ export default function Home() {
                         <div>수강 시간: {lecture.period}시간</div>
                         <div>만든이: {lecture.writer}</div>
                       </div>
+
                     </div>
                   </div>
                 ))}
