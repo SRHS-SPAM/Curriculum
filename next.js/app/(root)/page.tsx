@@ -94,22 +94,6 @@ const mapList: mapType[] = [
 export default function Home() {
   return (
     <div className="flex flex-col items-center gap-[30px] m-0 pb-40">
-      <header className="fixed z-[1] w-full bg-[white] h-24 lg:h-[4.5rem]">
-        <div className="w-full h-full flex justify-center items-center gap-12 border-b-[rgba(0,0,0,0.4)] border-b border-solid">
-          <Button variant={"ghost"} className="text-[140%] font-[700]">
-            문제
-          </Button>
-          <Button variant={"ghost"} className="text-[140%] font-[700]">
-            내 순위
-          </Button>
-          <Button variant={"ghost"} className="text-[140%] font-[700]">
-            대쉬보드
-          </Button>
-          <Button variant={"ghost"} className="text-[140%] font-[700]">
-            로그인
-          </Button>
-        </div>
-      </header>
       <main className="w-[80vw] flex flex-col gap-20 relative top-40">
         <Carousel
           options={{
@@ -235,18 +219,21 @@ export default function Home() {
                 {mapFild.lecture.map((lecture: lectureType, j: number) => (
                   <div
                     key={j}
-                    className="w-[20vw] h-[32vh] font-extrabold bg-[#ced4da] relative flex items-end rounded-[20px] group z-0"
+                    className="w-[20vw] h-[32vh] font-extrabold bg-[#ced4da] relative flex items-end rounded-[9px] group z-0"
                   >
-                    <div className="w-[20vw] h-[13vh] bg-[#f2f2f2] flex flex-col gap-[1rem] font-[bold] transition-[height] duration-500 ease-in-out p-4 rounded-[0px_0px_20px_20px/_0px_0px_20px_20px] group-hover:h-[80%]">
-                      <div className="text-[1rem]">{lecture.title}</div>
-                      <div className="text-[0.8rem]">{lecture.description}</div>
-                      <div className="h-full gap-3 flex flex-col opacity-0 transition-[opacity] duration-500 ease-in-out group-hover:transition-[opacity] group-hover:opacity-100 group-hover:duration-1000 group-hover:delay-100">
+                    <div className="w-[20vw] h-[13vh] bg-[#f2f2f2] flex flex-col gap-[0.5rem] transition-[height] duration-500 ease-in-out px-4 pt-2.5 rounded-[0px_0px_9px_9px/_0px_0px_9px_9px] group-hover:h-[80%]">
+                      <div className="text-[1rem] font-semibold">
+                        {lecture.title}
+                      </div>
+                      <div className="text-[0.8rem] font-semibold">
+                        {lecture.description}
+                      </div>
+                      <div className="h-full gap-3 flex flex-col opacity-0 transition-[opacity] duration-500 ease-in-out group-hover:transition-[opacity] group-hover:opacity-100 group-hover:duration-1000 group-hover:delay-100 font-semibold text-xs">
                         {/* detail info*/}
                         <div>{lecture.fild}</div>
                         <div>수강 시간: {lecture.period}시간</div>
                         <div>만든이: {lecture.writer}</div>
                       </div>
-
                     </div>
                   </div>
                 ))}

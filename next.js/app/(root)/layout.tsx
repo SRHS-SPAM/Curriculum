@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans_KR } from "next/font/google";
-import "./globals.css";
+import Navbar from "./_components/navbar";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,7 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="kr">
-      <body className={notoSansKr.className}>{children}</body>
+      <body className={notoSansKr.className}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
