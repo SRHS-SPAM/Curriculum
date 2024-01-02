@@ -77,17 +77,18 @@
 
 .bottom1 {
   width: 80vw;
-  height: 38vh;
+  height: 40vh;
   display: flex;
   align-items: center;
   overflow-x: scroll;
   overflow-y: hidden;
   gap: 3rem;
-  font-family: NanumSquare;
+  padding: 0 1rem;
+  z-index: 1;
 }
 
 .bottom1::-webkit-scrollbar {
-  height: 1.3rem;
+  height: 1rem;
 }
 
 .bottom1::-webkit-scrollbar-thumb {

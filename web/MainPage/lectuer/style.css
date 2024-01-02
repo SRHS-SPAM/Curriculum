@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  background-color: white;
+  height: 6rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 10rem;
+}
+
+.top {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.top > a {
+  font-size: 130%;
+}
+
+.top a :hover {
+  font-size: 110%;
+  color: #435585;
+}
+
+main{
+    width: 80vw;
+    display: flex;
+    gap: 5rem;
+    position: relative;
+    top: 6rem;
+}
+
+aside{
+    width: 20vw;
+    height: 80vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    width: 17vw;
+    height: 75vh;
+    box-shadow: 0rem 0rem 0rem 0.1rem gray;
+}
+
+.mini-top{
+    width: 17vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.fa-circle-check{
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    color: blue;
+    margin: 1.2rem;
+}
+
+.check{
+    font-size: 1rem;
+    color: blue;
+}
+
+.fa-angles-left{
+    font-size: 1.1rem;
+    color: white;
+    margin: 1.2rem;
+}
+
+.Lecture{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin: 1.2rem;
+}
+
+.mini-top1{
+    margin-left: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.time1{
+    font-size: 0.9rem;
+    color: white;
+}
+
+.time2{
+    font-size: 0.6rem;
+    color: white;
+    margin: 1.2rem;
+    margin-left: 3.0rem;
+}
+
+.line{
+    width: 15vw;
+    height: 0.2vh;
+    background-color: gray;
+    margin: 1rem;
+}
+
+.box1{
+    width: 15vw;
+    height: 4vh;
+    background-color: gray;
+    border-radius: 10px;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.box2{
+    width: 15vw;
+    height: 4vh;
+    border-radius: 10px;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+article{
+    width: 60vw;
+    height: 120vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+section{
+    width: 55vw;
+    height: 15vh;
+    background-color: rgb(236, 236, 236);
+    margin-top: 2rem;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px 5px darkgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box1-1{
+    width: 55vw;
+    height: 32vh;
+    background-color: rgb(236, 236, 236);
+    margin-top: 3rem;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px 5px darkgray;
+}
+
+.number{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 1.5rem;
+}
+
+.study{
+    margin-left: 2rem;
+}
