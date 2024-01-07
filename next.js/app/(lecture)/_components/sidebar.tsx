@@ -39,7 +39,7 @@ const Sidebar = () => {
       setIsCollapsed(false);
       setIsResetting(true);
 
-      sidebarRef.current.style.width = "291.2px";
+      sidebarRef.current.style.width = "24rem";
 
       setTimeout(() => setIsResetting(false), 300);
     }
@@ -49,17 +49,12 @@ const Sidebar = () => {
       <aside
         ref={sidebarRef}
         className={cn(
-          "left-0 h-full w-[291.2px] bg-[#22222C] flex justify-center items-center z-[999]",
+          "left-0 h-full w-96 overflow-y-auto bg-[#22222C] flex justify-center items-center z-[999]",
           isResetting && "transition-all ease-in-out duration-300"
         )}
       >
-        <div className={cn("p-2 h-full", isCollapsed && "w-0 p-0")}>
-          <div
-            className={cn(
-              "border-gray-500 border-solid border-2 h-full",
-              isCollapsed && ""
-            )}
-          >
+        <div className={cn("p-2 h-full")}>
+          <div className={cn("border-gray-500 border-solid border-2 h-full")}>
             <div className="flex justify-between items-center my-2">
               <div className="text-base text-blue-800 flex items-center ml-4">
                 <CheckCircle2 size={20} />
