@@ -217,7 +217,8 @@ export default function Home() {
             <div className='relative z-[2] before:content-[""] before:absolute before:top-0 before:bottom-0 before:w-4 before:bg-gradient-to-l before:from-[rgba(255,255,255,0)] before:left-0 before:to-white before:z-[3] after:bg-gradient-to-l after:content-[""] after:absolute after:top-0 after:bottom-0 after:w-4 after:from-[rgba(255,255,255,0)] after:to-white after:z-0 after:right-0 after:scale-x-[-1]'>
               <div className="bottom1">
                 {mapFild.lecture.map((lecture: lectureType, j: number) => (
-                  <div
+                  <Link
+                    href={"/" + (j + 1)}
                     key={j}
                     className="w-[20vw] h-[32vh] font-extrabold bg-[#ced4da] relative flex items-end rounded-[9px] group z-0"
                   >
@@ -235,7 +236,7 @@ export default function Home() {
                         <div>만든이: {lecture.writer}</div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>
