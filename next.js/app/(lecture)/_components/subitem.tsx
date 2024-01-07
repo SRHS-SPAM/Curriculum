@@ -4,8 +4,9 @@ import { cn } from "@/lib/utils";
 import {
   Check,
   CheckSquare,
-  ChevronsDown,
+  ChevronsUp,
   CircleDot,
+  LucideChevronDownSquare,
   Square,
 } from "lucide-react";
 import Link from "next/link";
@@ -38,14 +39,14 @@ const SubItem = ({ ai, key }: SubProps) => {
     if (itemsRef.current) {
       setIsCollapsed(false);
       setIsResetting(true);
-      itemsRef.current.style.height = String(ai.ttt*40+48)+"px";
+      itemsRef.current.style.height = String(ai.ttt * 40 + 48) + "px";
       setTimeout(() => setIsResetting(false), 300);
     }
   };
   const inin = () => {
     if (itemsRef.current) {
       setIsResetting(true);
-      setIsCollapsed(true)
+      setIsCollapsed(true);
       itemsRef.current.style.height = "0";
       setTimeout(() => setIsResetting(false), 300);
     }
@@ -67,10 +68,14 @@ const SubItem = ({ ai, key }: SubProps) => {
             학습 완료 {ai.tttt}/{ai.ttt}개
           </Link>
         </div>
-        <ChevronsDown
-          className="h-8 w-8 m-2"
+        <LucideChevronDownSquare
+          className={cn(
+            "h-8 w-8 m-2",
+            isResetting && "transition-all ease-in-out duration-300",
+            !isCollapsed && "rotate-180",
+          )}
           role="button"
-          onClick={!isResetting && isCollapsed ? out : inin}
+          onClick={!isResetting ? (isCollapsed ? out : inin) : () => {}}
         />
       </div>
       <div
@@ -83,9 +88,7 @@ const SubItem = ({ ai, key }: SubProps) => {
       >
         {ai.ttttt.map((aj: TTT, j) => (
           <div
-            className={cn(
-              "flex justify-between px-4 py-2 hover:bg-gray-200",
-            )}
+            className={cn("flex justify-between px-4 py-2 hover:bg-gray-200")}
             key={j}
           >
             <div className="flex items-center font-bold">
