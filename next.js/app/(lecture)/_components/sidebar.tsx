@@ -8,6 +8,7 @@ import {
   GraduationCap,
   Menu,
   MenuIcon,
+  X,
 } from "lucide-react";
 import Link from "next/link";
 import { ElementRef, useRef, useState } from "react";
@@ -49,11 +50,11 @@ const Sidebar = () => {
       <aside
         ref={sidebarRef}
         className={cn(
-          "overflow-y-auto h-full w-80 bg-[#22222C] flex z-[99999]",
+          "overflow-y-auto h-full w-80 bg-[#22222C] flex justify-center z-[999]",
           isResetting && "transition-all ease-in-out duration-300"
         )}
       >
-        <div className="border-gray-500 border-solid border-2 h-full">
+        <div className="border-gray-500 border-solid border-2 my-3 w-11/12">
           <div className="flex justify-between items-center my-2">
             <div className="text-base text-blue-800 flex items-center ml-4">
               <CheckCircle2 size={20} />
@@ -82,16 +83,17 @@ const Sidebar = () => {
           </div>
           <div className="m-4 h-[0.15rem] bg-gray-500" />
           {asideList.map((arg, i) => (
-            <Button
-              variant={"secondary"}
-              key={i}
-              className="bg-gray-500 rounded-lg flex mx-4 my-4 items-center text-white w-60"
-            >
-              <div className="flex justify-between w-full">
-                {arg[0]}
-                <div className="font-semibold text-base">{arg[1]}</div>
-              </div>
-            </Button>
+            <div className="w-full px-4" key={i}>
+              <Button
+                variant={"secondary"}
+                className="bg-gray-500 rounded-lg flex my-4 items-center text-white w-full"
+              >
+                <div className="flex justify-between w-full">
+                  {arg[0]}
+                  <div className="font-semibold text-base">{arg[1]}</div>
+                </div>
+              </Button>
+            </div>
           ))}
         </div>
       </aside>
