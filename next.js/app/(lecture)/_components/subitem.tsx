@@ -45,8 +45,8 @@ const SubItem = ({ ai, key }: SubProps) => {
   const inin = () => {
     if (itemsRef.current) {
       setIsResetting(true);
+      setIsCollapsed(true)
       itemsRef.current.style.height = "0";
-      setTimeout(() => setIsCollapsed(true), 150);
       setTimeout(() => setIsResetting(false), 300);
     }
   };
@@ -76,7 +76,7 @@ const SubItem = ({ ai, key }: SubProps) => {
       <div
         ref={itemsRef}
         className={cn(
-          "pt-0 h-0",
+          "pt-0 h-0 overflow-y-hidden",
           isResetting && "transition-all ease-in-out duration-300",
           !isCollapsed && `p-12 pt-0`
         )}
@@ -85,7 +85,6 @@ const SubItem = ({ ai, key }: SubProps) => {
           <div
             className={cn(
               "flex justify-between px-4 py-2 hover:bg-gray-200",
-              isCollapsed && "hidden"
             )}
             key={j}
           >
