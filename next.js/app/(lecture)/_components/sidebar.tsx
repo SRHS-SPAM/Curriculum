@@ -36,11 +36,11 @@ const Sidebar = () => {
 
   const resetWidth = () => {
     if (sidebarRef.current) {
+      setIsCollapsed(false);
       setIsResetting(true);
 
       sidebarRef.current.style.width = "291.2px";
 
-      setTimeout(() => setIsCollapsed(false), 150);
       setTimeout(() => setIsResetting(false), 300);
     }
   };
@@ -53,11 +53,11 @@ const Sidebar = () => {
           isResetting && "transition-all ease-in-out duration-300"
         )}
       >
-        <div className={cn("p-2 h-full pb-20", isCollapsed && "w-0")}>
+        <div className={cn("p-2 h-full", isCollapsed && "w-0 p-0")}>
           <div
             className={cn(
               "border-gray-500 border-solid border-2 h-full",
-              isCollapsed && "hidden"
+              isCollapsed && ""
             )}
           >
             <div className="flex justify-between items-center my-2">

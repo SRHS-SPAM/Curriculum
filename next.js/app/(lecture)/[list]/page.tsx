@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import {
   CheckCircle2,
   ChevronsDown,
@@ -197,13 +197,12 @@ const List = () => {
                   마지막으로 학습한 수업
                 </p>
                 <div className="bg-gray-100 flex justify-between px-4 py-2">
-                <div className="flex items-center font-bold">
-                  <CircleDot className="w-4 h-4 mr-4"/>CSS의 문법과 단어 의미
+                  <div className="flex items-center font-bold">
+                    <CircleDot className="w-4 h-4 mr-4" />
+                    CSS의 문법과 단어 의미
+                  </div>
+                  <Button className="rounded-2xl font-bold">학습하기</Button>
                 </div>
-                <Button className="rounded-2xl font-bold">
-                  학습하기
-                </Button>
-              </div>
               </div>
             </section>
           </div>
