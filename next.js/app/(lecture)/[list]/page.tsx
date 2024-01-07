@@ -176,9 +176,9 @@ const t: aiProps[] = [
 
 const List = () => {
   return (
-    <div className="flex h-full w-full">
+    <div className="flex h-full w-[100dvw]">
       <Sidebar />
-      <article className="flex flex-col justify-center h-full w-full">
+      <article className="flex flex-col justify-center h-full flex-1">
         <ScrollArea className="h-full">
           <div className="flex flex-col justify-center items-center">
             <section className="bg-white w-3/4 mt-12 mb-12 py-6 px-12 flex flex-col justify-between rounded-[10px] h-[300px] drop-shadow-2xl">

@@ -39,7 +39,7 @@ const Sidebar = () => {
       setIsCollapsed(false);
       setIsResetting(true);
 
-      sidebarRef.current.style.width = "24rem";
+      sidebarRef.current.style.width = "320px";
 
       setTimeout(() => setIsResetting(false), 300);
     }
@@ -49,56 +49,50 @@ const Sidebar = () => {
       <aside
         ref={sidebarRef}
         className={cn(
-          "left-0 h-full w-96 overflow-y-auto bg-[#22222C] flex justify-center items-center z-[999]",
+          "overflow-y-auto h-full w-80 bg-[#22222C] flex z-[99999]",
           isResetting && "transition-all ease-in-out duration-300"
         )}
       >
-        <div className={cn("p-2 h-full")}>
-          <div className={cn("border-gray-500 border-solid border-2 h-full")}>
-            <div className="flex justify-between items-center my-2">
-              <div className="text-base text-blue-800 flex items-center ml-4">
-                <CheckCircle2 size={20} />
-                &nbsp;진행중
-              </div>
+        <div className="border-gray-500 border-solid border-2 h-full">
+          <div className="flex justify-between items-center my-2">
+            <div className="text-base text-blue-800 flex items-center ml-4">
+              <CheckCircle2 size={20} />
+              &nbsp;진행중
+            </div>
 
-              <div
-                className="cursor-pointer h-7 w-7 mr-2 rounded-sm hover:bg-neutral-600 transition text-muted-foreground"
-                role="button"
-                onClick={collapse}
-              >
-                <ChevronsLeft className="h-7 w-7" size={28} color={"gray"} />
-              </div>
+            <div
+              className="cursor-pointer h-7 w-7 mr-2 rounded-sm hover:bg-neutral-600 transition text-muted-foreground"
+              role="button"
+              onClick={collapse}
+            >
+              <ChevronsLeft className="h-7 w-7" size={28} color={"gray"} />
             </div>
-            <a className="text-2xl font-bold text-white m-[1.2rem]">
-              프론트엔드 강의
-            </a>
-            <div className="ml-[1.2rem] flex items-center">
-              <a className="text-[0.9rem] text-gray-300">수강 시간</a>
-              <a className="text-[0.7rem] text-white m-[1.2rem] ml-12">
-                24 시간
-              </a>
-            </div>
-            <div className="m-4 h-[0.15rem] bg-gray-500" />
-            <div className="ml-[1.2rem] flex flex-col items-start">
-              <div className="font-semibold text-base text-white mb-2">
-                Stack
-              </div>
-              <div className="text-sm text-gray-300">html css vanillaJS</div>
-            </div>
-            <div className="m-4 h-[0.15rem] bg-gray-500" />
-            {asideList.map((arg, i) => (
-              <Button
-                variant={"secondary"}
-                key={i}
-                className="bg-gray-500 rounded-lg flex mx-4 my-4 items-center text-white w-60"
-              >
-                <div className="flex justify-between w-full">
-                  {arg[0]}
-                  <div className="font-semibold text-base">{arg[1]}</div>
-                </div>
-              </Button>
-            ))}
           </div>
+          <a className="text-2xl font-bold text-white m-[1.2rem]">
+            프론트엔드 강의
+          </a>
+          <div className="ml-[1.2rem] flex items-center">
+            <a className="text-[0.9rem] text-gray-300">수강 시간</a>
+            <a className="text-[0.7rem] text-white m-[1.2rem] ml-12">24 시간</a>
+          </div>
+          <div className="m-4 h-[0.15rem] bg-gray-500" />
+          <div className="ml-[1.2rem] flex flex-col items-start">
+            <div className="font-semibold text-base text-white mb-2">Stack</div>
+            <div className="text-sm text-gray-300">html css vanillaJS</div>
+          </div>
+          <div className="m-4 h-[0.15rem] bg-gray-500" />
+          {asideList.map((arg, i) => (
+            <Button
+              variant={"secondary"}
+              key={i}
+              className="bg-gray-500 rounded-lg flex mx-4 my-4 items-center text-white w-60"
+            >
+              <div className="flex justify-between w-full">
+                {arg[0]}
+                <div className="font-semibold text-base">{arg[1]}</div>
+              </div>
+            </Button>
+          ))}
         </div>
       </aside>
       <div
