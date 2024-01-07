@@ -40,7 +40,7 @@ const Sidebar = () => {
 
       sidebarRef.current.style.width = "291.2px";
 
-      setTimeout(() => setIsCollapsed(false), 200);
+      setTimeout(() => setIsCollapsed(false), 150);
       setTimeout(() => setIsResetting(false), 300);
     }
   };
@@ -49,7 +49,7 @@ const Sidebar = () => {
       <aside
         ref={sidebarRef}
         className={cn(
-          "fixed left-0 h-full w-[291.2px] bg-[#22222C] flex justify-center items-center z-[999]",
+          "left-0 h-full w-[291.2px] bg-[#22222C] flex justify-center items-center z-[999]",
           isResetting && "transition-all ease-in-out duration-300"
         )}
       >
