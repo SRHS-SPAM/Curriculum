@@ -4,7 +4,9 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import {
   CheckCircle2,
+  ChevronRight,
   ChevronsLeft,
+  ChevronsRight,
   GraduationCap,
   Menu,
   MenuIcon,
@@ -12,6 +14,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { ElementRef, useRef, useState } from "react";
+import Navbar from "./navbar";
 
 const asideList = [
   [<Menu key={1} />, "수업목록"],
@@ -27,10 +30,11 @@ const Sidebar = () => {
 
   const collapse = () => {
     if (sidebarRef.current) {
-      setIsCollapsed(true);
       setIsResetting(true);
 
       sidebarRef.current.style.width = "0";
+
+      setTimeout(() => setIsCollapsed(true), 100);
       setTimeout(() => setIsResetting(false), 300);
     }
   };
@@ -50,11 +54,16 @@ const Sidebar = () => {
       <aside
         ref={sidebarRef}
         className={cn(
-          "overflow-y-auto h-full w-80 bg-[#22222C] flex justify-center z-[999]",
-          isResetting && "transition-all ease-in-out duration-300"
+          "overflow-y-hidden h-full w-80 bg-[#22222C] flex justify-center z-[999]",
+          isResetting && "transition-all ease-ease duration-300"
         )}
       >
-        <div className="border-gray-500 border-solid border-2 my-3 w-11/12">
+        <div
+          className={cn(
+            "border-gray-500 border-solid border-2 my-3 w-11/12",
+            isCollapsed && "hidden"
+          )}
+        >
           <div className="flex justify-between items-center my-2">
             <div className="text-base text-blue-800 flex items-center ml-4">
               <CheckCircle2 size={20} />
@@ -69,9 +78,9 @@ const Sidebar = () => {
               <ChevronsLeft className="h-7 w-7" size={28} color={"gray"} />
             </div>
           </div>
-          <a className="text-2xl font-bold text-white m-[1.2rem]">
+          <div className="text-2xl font-bold text-white m-[1.2rem]">
             프론트엔드 강의
-          </a>
+          </div>
           <div className="ml-[1.2rem] flex items-center">
             <a className="text-[0.9rem] text-gray-300">수강 시간</a>
             <a className="text-[0.7rem] text-white m-[1.2rem] ml-12">24 시간</a>
@@ -100,18 +109,19 @@ const Sidebar = () => {
       <div
         ref={navbarRef}
         className={cn(
-          "absolute top-0 z-[99999] w-full h-24 lg:h-[4.5rem]",
-          isResetting && "transition-all ease-in-out duration-300"
+          "absolute top-0 z-[9999] w-full h-24 lg:h-[4.5rem]",
+          isResetting && "transition-all ease-ease duration-300"
         )}
       >
         <nav className="bg-transparent px-3 py-2 w-full h-full flex items-center">
           {isCollapsed && (
-            <Menu
+            <ChevronsRight
               onClick={resetWidth}
               role="button"
-              className="h-8 w-8 text-muted-foreground"
+              className="h-8 w-8 text-muted-foreground z-[99999]"
             />
           )}
+          <Navbar />
         </nav>
       </div>
     </>

@@ -51,6 +51,9 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      transitionTimingFunction: {
+        ease: "cubic-bezier(0.25, 0.1, 0.25, 1.0)",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

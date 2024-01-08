@@ -79,7 +79,7 @@ const SubItem = ({ args, key }: argsProps) => {
           color={"gray"}
           className={cn(
             "h-8 w-8 m-2",
-            isResetting && "transition-all duration-100",
+            isResetting && "transition-all ease-ease duration-100",
             !isCollapsed && "rotate-180"
           )}
         />
@@ -88,7 +88,7 @@ const SubItem = ({ args, key }: argsProps) => {
         ref={itemsRef}
         className={cn(
           "pt-0 h-0 overflow-y-hidden",
-          isResetting && "transition-all duration-100",
+          isResetting && "transition-all ease-ease duration-100",
           !isCollapsed && `p-12 pt-0`
         )}
       >
