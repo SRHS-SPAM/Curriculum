@@ -26,9 +26,11 @@ interface argsProps {
     lectureGroup: lectureType[];
   };
   key: number;
+  key2: number;
+  list: number;
 }
 
-const SubItem = ({ args, key }: argsProps) => {
+const SubItem = ({ args, key, key2, list }: argsProps) => {
   const [isResetting, setIsResetting] = useState(false);
   const [isCollapsed, setIsCollapsed] = useState(true);
 
@@ -93,6 +95,7 @@ const SubItem = ({ args, key }: argsProps) => {
         )}
       >
         {args.lectureGroup.map((aj: lectureType, j) => (
+          <Link key={j} href={`./${list}/${key2+1}/${j+1}`}>
           <div
             className={cn(
               "flex justify-between px-4 py-2 h-11 hover:bg-gray-200"
@@ -105,6 +108,7 @@ const SubItem = ({ args, key }: argsProps) => {
             </div>
             {aj.isCompleted ? <CheckSquare /> : <Square />}
           </div>
+          </Link>
         ))}
       </div>
     </section>

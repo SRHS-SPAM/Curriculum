@@ -175,7 +175,8 @@ const data: argsProps[] = [
   },
 ];
 
-const List = () => {
+const List = (props: any) => {
+  const list=props.params.list;
   return (
     <div className="flex h-full w-[100dvw]">
       <Sidebar />
@@ -212,7 +213,7 @@ const List = () => {
           </div>
           <div className="flex flex-col justify-center items-center">
             {data.map((args: argsProps, i) => (
-              <SubItem args={args} key={i} />
+              <SubItem args={args} key={i} key2={i} list={list}/>
             ))}
           </div>
         </ScrollArea>

@@ -1,4 +1,6 @@
+import Link from "next/link";
 import BottomBar from "./_components/bottomBar";
+import Main from "./_components/main";
 import SideBar from "./_components/sideBar";
 
 type lectGroup = {
@@ -15,7 +17,7 @@ type argsProps = {
 
 const Sample = {
   title: "3. JS 기초",
-  lectureQuantity: 6,
+  lectureQuantity: 7,
   completedLecture: 1,
   lectureGroup: [
     {
@@ -42,18 +44,26 @@ const Sample = {
       lectureName: "테스트",
       isCompleted: false,
     },
+    {
+      lectureName: "코끼리 아저씨는 코가손이래 코가손 할머니는??? 잘 모르겠어....",
+      isCompleted: false,
+    },
   ],
 };
 
-export default function LectureDetail() {
+export default function LectureDetail(props: any) {
+  let lectureDetail = props.params.lectureDetail;
+  if(lectureDetail<=0) lectureDetail=1;
+  if(lectureDetail>Sample.lectureQuantity) lectureDetail=Sample.lectureQuantity;
   return (
     <div className="h-full w-full flex flex-col text-gray-100">
       <div className="w-full h-full flex">
-        <SideBar isChoosen={1} Data={Sample.lectureGroup}/>
+        <SideBar isChoosen={lectureDetail-1} Data={Sample.lectureGroup}/>
+        <Main />
       </div>
       <BottomBar
-        lectureNow={2}
-        subTitle={Sample.lectureGroup[1].lectureName}
+        lectureNow={lectureDetail}
+        subTitle={Sample.lectureGroup[lectureDetail-1].lectureName}
         nextLink="#"
         lectureQuantity={Sample.lectureQuantity}
         title={Sample.title}
