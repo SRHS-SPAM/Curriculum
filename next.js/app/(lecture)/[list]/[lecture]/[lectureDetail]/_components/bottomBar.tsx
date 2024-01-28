@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import { ArrowLeft, ArrowRight, ArrowRightSquare, LogOut } from "lucide-react";
 import Link from "next/link";
 
 interface BottomBarProps {
   title: string;
-  lectureQuantity: number;
+  lectureQuantity: number
   lectureNow: number;
   subTitle: string;
   nextLink: string;
@@ -31,16 +32,16 @@ const BottomBar = ({
       {/*좀 이상하게 중앙정렬 되어있으니 수정 요망*/}
 
       <div className="flex space-x-4">
-        <Button size={"icon"} asChild>
-          <Link href={""}>
+        <Button className={cn(lectureNow===1 && "opacity-50")} size={"icon"} asChild>
+        <Link href={lectureNow===1?'#':`${lectureNow-1}`}>
             <ArrowLeft />
           </Link>
         </Button>
         <div className="h-full text-3xl whitespace-nowrap font-bold flex items-center">
           {lectureNow} / {lectureQuantity}
         </div>
-        <Button size={"icon"} asChild>
-          <Link href={""}>
+        <Button className={cn(lectureNow===lectureQuantity && "opacity-50")} size={"icon"} asChild>
+          <Link href={lectureNow===lectureQuantity?'#':`${lectureNow+1}`}>
             <ArrowRight />
           </Link>
         </Button>

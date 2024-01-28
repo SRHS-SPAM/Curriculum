@@ -15,6 +15,17 @@ type argsProps = {
   lectureGroup: lectGroup[];
 };
 
+type ParamsProps = {
+  list: number;
+  lecture: number;
+  lectureDetail: number;
+}
+
+type LectureDetailProps = {
+  params: ParamsProps;
+  searchParams: any;
+}
+
 const Sample = {
   title: "3. JS 기초",
   lectureQuantity: 7,
@@ -51,10 +62,11 @@ const Sample = {
   ],
 };
 
-export default function LectureDetail(props: any) {
-  let lectureDetail = props.params.lectureDetail;
-  if(lectureDetail<=0) lectureDetail=1;
-  if(lectureDetail>Sample.lectureQuantity) lectureDetail=Sample.lectureQuantity;
+export default function LectureDetail(props: LectureDetailProps) {
+  let lectureDetail:number = props.params.lectureDetail;
+  if(lectureDetail<=0) lectureDetail=1; //명시해줘도 얜 string 이엿어..
+  else if(lectureDetail>Sample.lectureQuantity) lectureDetail=Sample.lectureQuantity;
+  else lectureDetail=Number(lectureDetail);
   return (
     <div className="h-full w-full flex flex-col text-gray-100">
       <div className="w-full h-full flex">
