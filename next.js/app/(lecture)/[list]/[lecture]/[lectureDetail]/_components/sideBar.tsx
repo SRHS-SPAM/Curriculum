@@ -14,7 +14,7 @@ interface SideBarProps {
   isChoosen: number;
 }
 
-const SideBar = ({ Data, isChoosen}: SideBarProps) => {
+const SideBar = ({ Data, isChoosen }: SideBarProps) => {
   const [isResetting, setIsResetting] = useState(false);
   const [isCollapsed, setIsCollapsed] = useState(false);
 
@@ -24,12 +24,12 @@ const SideBar = ({ Data, isChoosen}: SideBarProps) => {
     let collapsafter = !isCollapsed;
     if (sidebarRef.current) {
       setIsResetting(true);
-        if(!collapsafter) setIsCollapsed(!isCollapsed);
-        
-      sidebarRef.current.style.width = isCollapsed ? "400px" : "72px";
+      if (!collapsafter) setIsCollapsed(!isCollapsed);
+
+      sidebarRef.current.style.width = isCollapsed ? "400px" : "48px";
 
       setTimeout(() => {
-        if(collapsafter) setIsCollapsed(!isCollapsed);
+        if (collapsafter) setIsCollapsed(!isCollapsed);
         setIsResetting(false);
       }, 300);
     }
@@ -39,7 +39,7 @@ const SideBar = ({ Data, isChoosen}: SideBarProps) => {
     <div
       ref={sidebarRef}
       className={cn(
-        "h-full w-[400px] flex flex-col bg-black border-gray-500 border-b-2 p-4 [&>*]:h-[40px] gap-2",
+        "h-full w-[400px] flex flex-col bg-gray-900 border-gray-500 border-b-2 py-4 px-1 [&>*]:h-[40px] gap-2",
         isResetting && "transition-all ease-ease duration-300"
       )}
     >
@@ -53,7 +53,7 @@ const SideBar = ({ Data, isChoosen}: SideBarProps) => {
           isChoosen={isChoosen == i ? true : false}
           isCompleted={ai.isCompleted}
           subTitle={ai.lectureName}
-          lectureLink={(i+1)+""}
+          lectureLink={i + 1 + ""}
           key={i}
         />
       ))}

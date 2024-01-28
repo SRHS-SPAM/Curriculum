@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { LogOut } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowRightSquare, LogOut } from "lucide-react";
 import Link from "next/link";
 
 interface BottomBarProps {
@@ -18,7 +18,7 @@ const BottomBar = ({
   subTitle,
 }: BottomBarProps) => {
   return (
-    <div className="flex items-center justify-between w-full h-[80px] bg-black p-4 select-none">
+    <div className="flex items-center justify-between w-full h-[80px] bg-gray-800 p-4 select-none">
       <div className="items-center h-full inline-flex w-full">
         <Link href={"../"}>
           <LogOut className="rotate-180 h-[30px] w-[30px]" />
@@ -27,10 +27,23 @@ const BottomBar = ({
           <div>{title}</div>
           <div className="text-xs m-2">- {subTitle}</div>
         </div>
-      </div>{" "}
+      </div>
       {/*좀 이상하게 중앙정렬 되어있으니 수정 요망*/}
-      <div className="h-full text-4xl whitespace-nowrap font-bold">
-        {lectureNow} / {lectureQuantity}
+
+      <div className="flex space-x-4">
+        <Button size={"icon"} asChild>
+          <Link href={""}>
+            <ArrowLeft />
+          </Link>
+        </Button>
+        <div className="h-full text-3xl whitespace-nowrap font-bold flex items-center">
+          {lectureNow} / {lectureQuantity}
+        </div>
+        <Button size={"icon"} asChild>
+          <Link href={""}>
+            <ArrowRight />
+          </Link>
+        </Button>
       </div>
       <div className="w-full flex justify-end">
         <Button variant={"ghost"} className="bg-white text-black font-bold">
