@@ -29,12 +29,14 @@ const BottomBar = ({
         </div>
       </div>{" "}
       {/*좀 이상하게 중앙정렬 되어있으니 수정 요망*/}
-      <div className="h-full text-4xl font-bold w-full">
+      <div className="h-full text-4xl whitespace-nowrap font-bold">
         {lectureNow} / {lectureQuantity}
       </div>
-      <Button variant={"ghost"} className="bg-white text-black font-bold">
-        다음 강의
-      </Button>
+      <div className="w-full flex justify-end">
+        <Button variant={"ghost"} className="bg-white text-black font-bold">
+          다음 강의
+        </Button>
+      </div>
     </div>
   );
 };
