@@ -7,7 +7,7 @@ export default function LeactureLayout({
 }) {
   return (
     <div className="h-full">
-      <main className="h-full pt-24 lg:pt-[4.5rem]">{children}</main>
+      <main className="h-full">{children}</main>
     </div>
   );
 }
